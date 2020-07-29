@@ -68,7 +68,7 @@ class board:
     #Game Rules: 
     def game_rules(self):
         x = 15
-        for i in range(x): 
+        for y in range(x): 
             self.update_board = deepcopy(self.board)
             for i in range(len(self.board)):
                 for j in range(len(self.board[0])):
@@ -89,8 +89,8 @@ class board:
                             self.update_board[i][j] = 1
                         else:
                             self.update_board[i][j] = 0
-        self.board = self.update_board
-        x+=1 
+            self.board = self.update_board
+            self.printboard()
                         
 #Main Function:
 if __name__ == "__main__":
@@ -100,7 +100,6 @@ if __name__ == "__main__":
     print("Moving to set pattern")#optional to the code
     #board_.setPattern(row,column)
     board_.InputsetPattern(row,column)
-    board_.board_ = board_.update_board
     board_.printboard()
        
    
